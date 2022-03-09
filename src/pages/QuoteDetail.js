@@ -6,18 +6,6 @@ import LoadingSpinner from '../components/UI/LoadingSpinner'
 import useHttp from '../hooks/use-http'
 import { getSingleQuote } from '../lib/api'
 
-const DUMMY_QUOTES = [
-  {
-    id: 'q1',
-    author: 'Shakespeare',
-    text: 'Paçocaaaaaaaaaa'
-  },
-  {
-    id: 'q2',
-    author: 'Shakespeare',
-    text: 'Queijoooooooo'
-  }
-]
 
 const QuoteDetail = () => {
     const match = useRouteMatch()
@@ -49,7 +37,6 @@ const QuoteDetail = () => {
 
   return (
     <div>
-        <h1>QuoteDetail</h1>
        <HighlightedQuote text={loadedQuote.text} author={loadedQuote.author}/>
        <Route path={`${match.path}`} exact>
           <div className='centered'>
